@@ -1,6 +1,6 @@
-<%= @name_1 %> attacked <%= @name_2 %>
+<%= @game.player_1.name %> attacked <%= @game.player_2.name %>
 
 <h3>Hitpoints</h3>
 
 
-<%= @name_1 %>: <%=@HP_1 %>HP vs <%= @name_2 %>: <%= @HP_2 %>HP
+<%= @game.player_1.name %>: <%= @game.player_1.hit_points %>HP vs <%= @game.player_2.name %>: <%= @game.player_2.hit_points %>HP
