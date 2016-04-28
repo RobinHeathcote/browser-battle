@@ -11,10 +11,14 @@ class Game
   end
 
   def attack
-    @opponent.receive_damage
+    @opponent.receive_damage(Kernel.rand(1..10))
   end
 
   def switcher
     @current_player, @opponent = @opponent, @current_player
+  end
+
+  def game_over?
+    @current_player.hit_points <= 0
   end
 end

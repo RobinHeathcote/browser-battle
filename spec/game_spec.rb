@@ -29,4 +29,11 @@ describe Game do
     end
   end
 
+  describe '#game_over?' do
+    it 'ends game if player HP = 0' do
+      allow(player_1).to receive(:hit_points) {0}
+      expect(game.game_over?).to be true
+    end
+  end
+
 end
