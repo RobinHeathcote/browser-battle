@@ -8,6 +8,7 @@ feature 'Attack:' do
   scenario 'attack reduces opponents HP' do
     sign_in_and_play
     click_button 'Attack'
+    click_button 'OK'
     expect(page).to have_content ('Mittens: 50HP')
   end
 end
